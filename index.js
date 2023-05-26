@@ -58,3 +58,7 @@ function fibonacci(num) {
 // console.log(fibonacci(9));
 
 // *************************************************************************
+
+// Find the missing number in an array of consecutive numbers
+
+// [1,2,4,8, x, 32]
