@@ -39,3 +39,22 @@ function numIsPowerOfTwo(num) {
 // Implement a function to generate Fibonacci series
 
 // 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+
+function fibonacci(num) {
+  let fibSeries = [0, 1];
+
+  if (num <= 1) {
+    return fibSeries.slice(0, n + 1);
+  }
+
+  for (let i = 1; i < num; i++) {
+    let nextFib = fibSeries[i] + fibSeries[i - 1];
+    fibSeries.push(nextFib);
+  }
+
+  return fibSeries;
+}
+
+// console.log(fibonacci(9));
+
+// *************************************************************************
