@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      @keyframes slideInRight {
+        from {
+          transform: translateX(300px);
+        }
+
+        to {
+          transform: translateX(0px);
+        }
+      }
+
+      .btn {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 40px;
+        font-size: 1.5rem;
+        border-radius: 3px;
+        padding: 0.125rem;
+        margin: 1rem;
+        color: blue;
+        background-color: brown;
+
+        animation-name: slideInRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        animation-delay: 0s;
+        animation-fill-mode: none;
+        animation-direction: normal;
+        animation-iteration-count: 1;
+      }
+    </style>
+
+    <div class="btn"><button>Click here</button></div>
+  </body>
+</html>
