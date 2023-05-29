@@ -62,3 +62,32 @@ function fibonacci(num) {
 // Find the missing number in an array of consecutive numbers
 
 // [1,2,4,8, x, 32]
+function findMissingNumber(array) {
+  // Calculate the expected sum of consecutive numbers
+  const n = array.length + 1;
+  const expectedSum = (n * (n + 1)) / 2;
+
+  // Calculate the actual sum of the given array
+  const actualSum = array.reduce((sum, num) => sum + num, 0);
+  console.log(`acutal sum: ${actualSum}`);
+  console.log(`acutal sum: ${expectedSum}`);
+
+  // The missing number is the difference between the expected and actual sums
+  const missingNumber = expectedSum - actualSum;
+
+  return missingNumber;
+}
+
+// Example usage
+// const numbers = [1, 2, 3, 5, 6, 7, 8];
+// const missingNumber = findMissingNumber(numbers);
+// console.log(missingNumber); // Output: 4
+
+// *************************************************************************************
+
+// Implement a function to rotate an array to the right by a given number of steps
+
+// Example usage
+// const array = [1, 2, 3, 4, 5];
+// const steps = 2;
+// Output: [4, 5, 1, 2, 3]
