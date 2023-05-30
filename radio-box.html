@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        box-sizing: border-box;
+      }
+      .bluebox {
+        width: 400px;
+        height: 400px;
+        background: lightblue;
+      }
+
+      .greenbox {
+        background: lightgreen;
+        width: 50%;
+        height: 50%;
+        animation: leftToRight 1000ms ease 1000ms forwards infinite alternate;
+      }
+
+      p::first-letter {
+        color: red;
+        font-weight: bold;
+      }
+      /* Hide the default input */
+      input[type="checkbox"],
+      input[type="radio"] {
+        display: none;
+      }
+
+      /* Custom style for checkboxes */
+      input[type="checkbox"] + label::before {
+        content: "";
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border: 2px solid #999;
+        border-radius: 3px;
+        background-color: white;
+        margin-right: 5px;
+      }
+
+      input[type="checkbox"]:checked + label::before {
+        background-color: #007bff;
+      }
+
+      /* Custom style for radio buttons */
+      input[type="radio"] + label::before {
+        content: "";
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border: 2px solid #999;
+        border-radius: 50%;
+        background-color: white;
+        margin-right: 5px;
+      }
+
+      input[type="radio"]:checked + label::before {
+        background-color: #007bff;
+      }
+    </style>
+
+    <div class="bluebox">
+      <div class="greenbox">box</div>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio
+        dolorem corporis enim maiores vero laudantium, totam assumenda, aliquid
+        debitis sed asperiores nesciunt iusto, error voluptatem! Eaque fuga
+        nihil doloremque saepe.
+      </p>
+      <input type="checkbox" id="checkbox" />
+      <label for="checkbox">Custom Checkbox</label>
+
+      <input type="radio" id="radio" />
+      <label for="radio">Custom Radio Button</label>
+    </div>
+  </body>
+</html>

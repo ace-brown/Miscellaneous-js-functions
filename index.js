@@ -85,6 +85,46 @@ function findMissingNumber(array) {
 
 // *************************************************************************************
 
+// Implement a function to find the longest word in a string
+
+const string = "this is the longest word this string";
+
+function longestWordFinder(str) {
+  const words = str.split(" ");
+
+  let longestWord = "";
+  words.forEach((word) => {
+    if (word.length > longestWord.length) {
+      longestWord = word;
+    }
+  });
+  return longestWord;
+}
+
+// console.log(longestWordFinder(string));
+
+// ********************************************************************
+
+// Reverse an array of strings
+
+const str2 = "go to gym";
+
+function wordReverser(str) {
+  const tokens = str.split(" ");
+  let newArr = [];
+  for (let token = tokens.length - 1; token >= 0; token--) {
+    newArr.push(tokens[token]);
+  }
+
+  const reversesdStr = newArr.join(" ");
+
+  return reversesdStr;
+}
+
+// console.log(wordReverser(str2));
+
+// ****************************************************************
+
 // Implement a function to rotate an array to the right by a given number of steps
 
 // Example usage
