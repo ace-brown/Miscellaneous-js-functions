@@ -1,3 +1,5 @@
+const readline = require("readline");
+
 // Flaten an array
 function flatenArray(array) {
   let sum = 0;
@@ -131,3 +133,71 @@ function wordReverser(str) {
 // const array = [1, 2, 3, 4, 5];
 // const steps = 2;
 // Output: [4, 5, 1, 2, 3]
+
+function rotateArray(nums, k) {
+  const n = nums.length;
+  k %= n; // Ensure k is within the range of the array length
+
+  // Reverse the whole array
+  reverse(nums, 0, n - 1);
+
+  // Reverse the first to the k element
+  reverse(nums, 0, k - 1);
+
+  // Reverse the rest of the array from k to the end
+  reverse(nums, k, n - 1);
+
+  return nums;
+}
+
+function reverse(nums, start, end) {
+  while (start < end) {
+    [nums[start], nums[end]] = [nums[end], nums[start]];
+    start++;
+    end--;
+  }
+}
+
+const nums = [1, 2, 3, 4, 5];
+const k = 2;
+
+// console.log(rotateArray(nums, k));
+
+//********************************************************
+
+// Implement a function to check if a given year is a leap year.
+
+// there are two conditions for this:
+// 1- if it is divisable by 4, it's a leap year no matter what
+// 2- i.e if it's divisable by 4 and not by 100, then it's a leap year,
+// but if it's divisable by 100 then it must also be divisable by 400
+// in order to be a leap year, otherwise it's not a leap year.
+
+function leapYearDeterminer() {
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  });
+
+  rl.question("Enter a year: ", function (year) {
+    if (year % 4 === 0) {
+      if (year % 100 === 0) {
+        if (year % 400 === 0) {
+          console.log(year + " is a leap year.");
+        } else {
+          console.log(year + " is not a leap year.");
+        }
+      } else {
+        console.log(year + " is a leap year.");
+      }
+    } else {
+      console.log(year + " is not a leap year.");
+    }
+
+    rl.close();
+  });
+}
+
+// leapYearDeterminer();
+
+// **********************************************************************
