@@ -201,3 +201,48 @@ function leapYearDeterminer() {
 // leapYearDeterminer();
 
 // **********************************************************************
+// We have two sheep that we want to calculate their Body Mass Indexes.
+
+// Formula: BMI = mass / (height * height) (mass in kg and height in meters).
+
+// tasks:
+
+//  For each of them, create an object with properties for their full name, mass,
+//  and height . Name these objects as sheepOne and sheepTwo. Create a method on each object to calculate
+//  the BMI. Assign the BMI value to a property. Log to the console who has the higher BMI,
+//  Example: "sheepOne's BMI is (28.3) is higher than sheepTwo's (23.9)".
+
+//  The fitst sheeep weighs 59 kg and is 0.69 m tall and the second sheep weighs 55 kg and is 0.56 m tall.
+
+const sheepOne = {
+  fullName: "Sheep One",
+  mass: 59,
+  height: 0.69,
+  calcBMI: function () {
+    return (this.BMI = this.mass / (this.height * this.height));
+  },
+};
+
+const sheepTwo = {
+  fullName: "Sheep Two",
+  mass: 55,
+  height: 0.56,
+  calcBMI: function () {
+    return (this.BMI = this.mass / (this.height * this.height));
+  },
+};
+
+// sheepOne.calcBMI();
+// sheepTwo.calcBMI();
+
+// if (sheepOne.BMI > sheepTwo.BMI) {
+//   return console.log(
+//     `${sheepOne.fullName}'s BMI (${sheepOne.BMI}) is higher than '${sheepTwo.fullName}s (${sheepTwo.BMI})`
+//   );
+// } else {
+//   return console.log(
+//     `${sheepTwo.fullName}'s BMI (${sheepTwo.BMI}) is higher than '${sheepOne.fullName}s (${sheepOne.BMI})`
+//   );
+// }
+
+// *******************************************************************************************************
