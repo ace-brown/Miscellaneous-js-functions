@@ -246,3 +246,34 @@ const sheepTwo = {
 // }
 
 // *******************************************************************************************************
+
+// Discount calculator
+
+// imagine you want to buy some stuff and now you want to calculate the discount and the price after discount
+// if the price is less than 100 Euro, you will get 20% discount, if it's more than that, you get 40% discount
+// now Write a function calcDiscount that takes any price value as an input and returns the corresponding discount,
+
+// then create an array called prices containing the prices.
+
+// Create an array called discounts containing the discount value for each price, calculated from the function you
+// created before.
+
+// You can also Create an array that gives the the total values, so the price + discount.
+
+const prices = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const calcDiscount = (prices) => {
+  const discounts = [];
+  const totalPrice = [];
+  for (let i = 0; i < prices.length; i++) {
+    const discount =
+      prices[i] <= 300 && prices[i] >= 50 ? prices[i] * 0.15 : prices[i] * 0.2;
+    discounts.push(discount);
+    totalPrice.push(discount + prices[i]);
+  }
+
+  return { discounts, totalPrice };
+};
+
+// console.log(calcDiscount(prices));
+
+// *************************************************************************************************
