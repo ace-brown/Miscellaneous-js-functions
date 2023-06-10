@@ -1,4 +1,4 @@
-const readline = require("readline");
+// const readline = require("readline");
 
 // Flaten an array
 function flatenArray(array) {
@@ -277,3 +277,37 @@ const calcDiscount = (prices) => {
 // console.log(calcDiscount(prices));
 
 // *************************************************************************************************
+
+// CelsiusToKalvinConverter
+
+const CelsiusToKalvinConverter = () => {
+  const spesifcation = {
+    type: "temp",
+    unit: "celsius",
+    value: Number(prompt("Enter the degree in celsius: ")),
+  };
+  const kalvin = spesifcation.value + 273;
+  return kalvin;
+};
+
+// console.log(CelsiusToKalvinConverter());
+
+// **********************************************************************************************
+// maxTempratur based on the day funcion
+
+const maxTemp = [545, 44, 0];
+
+//`17 deg in 1 days...21 deg in 2 days...23 deg in 3 days`
+
+function printForcast(arr) {
+  let result = "";
+
+  for (let i = 0; i < arr.length; i++) {
+    result += `${arr[i]} deg in ${i + 1} days...`;
+  }
+
+  // resultConcat = result.join(" ");
+  return result;
+}
+
+console.log(printForcast(maxTemp));
